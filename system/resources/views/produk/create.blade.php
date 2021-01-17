@@ -12,30 +12,35 @@
                       @csrf
                      <div class="form-group">
                         <label for="" class="control-label">Nama</label>
+                         @include('utils.errors', ['item' => 'nama']);
                         <input type="text" class="form-control" name="nama"></input>
                      </div>
                      <div class="row">
                        <div class="col-md-3">
                            <div class="form-group">
                              <label for="" class="control-label">foto</label>
+                              @include('utils.errors', ['item' => 'foto']);
                              <input type="file" class="form-control" name="foto" accept=".png"></input>
                           </div>
                         </div>
                         <div class="col-md-3">
                            <div class="form-group">
                              <label for="" class="control-label">Stok</label>
+                              @include('utils.errors', ['item' => 'stok']);
                              <input type="text" class="form-control" name="stok"></input>
                           </div>
                         </div>
                         <div class="col-md-3">
                            <div class="form-group">
                              <label for="" class="control-label">Harga</label>
+                              @include('utils.errors', ['item' => 'harga']);
                              <input type="text" class="form-control" name="harga"></input>
                            </div> 
                         </div>
                         <div class="col-md-3">
                            <div class="form-group">
                              <label for="" class="control-label">Berat</label>
+                              @include('utils.errors', ['item' => 'berat']);
                              <input type="text" class="form-control" name="berat"></input>
                            </div> 
                         </div>

@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Requests\ProdukStoreRequest;
+use Illuminate\Support\Str;
 use App\Models\Produk;
 use App\Models\Provinsi;
 
@@ -17,7 +19,7 @@ class ProdukController extends Controller{
 	function create(){
 		return view('produk.create');
 	}
-	function store(){
+	function store(ProdukStoreRequest $request ){
 		
 		$produk = new Produk;
 		$produk->id_user = request()->user()->id;
